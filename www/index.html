@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>asciiEntropy</title>
+
+    <link rel="stylesheet" href="lib/material-design-lite/material.min.css" />
+    <script src="lib/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="lib/material-icons-font/icon.css" />
+    <link rel="stylesheet" href="app/index.css" />
+  </head>
+  <body>
+    <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">asciiEntropy</span>
+
+        <form id="options" action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" min="0"
+              pattern="-?[0-9]*(\.[0-9]+)?" id="count_total" />
+            <label class="mdl-textfield__label" for="count_total">
+              # Total
+            </label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" min="0"
+              pattern="-?[0-9]*(\.[0-9]+)?" id="count_lower" />
+            <label class="mdl-textfield__label" for="count_lower">
+              # Lowercase (a-z)
+            </label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" min="0"
+              pattern="-?[0-9]*(\.[0-9]+)?" id="count_upper" />
+            <label class="mdl-textfield__label" for="count_upper">
+              # Upercase (A-Z)
+            </label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" min="0"
+              pattern="-?[0-9]*(\.[0-9]+)?" id="count_symbol" />
+            <label class="mdl-textfield__label" for="count_symbol">
+              # Special
+            </label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <textarea class="mdl-textfield__input" rows= "3"
+              id="chars_symbol" ></textarea>
+            <label class="mdl-textfield__label" for="chars_symbol">
+              Special Charachters
+            </label>
+          </div>
+        </form>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div class="center-center">
+            <div class="password"></div>
+
+            <button id="btn-copy"
+              class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary mdl-js-ripple-effect">
+              <i class="material-icons">content_copy</i>
+              Copy
+            </button>
+
+            <button id="btn-new"
+              class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+              <i class="material-icons">autorenew</i>
+              New
+            </button>
+          </div>
+        </div>
+
+        <div id="toast" class="mdl-js-snackbar mdl-snackbar">
+          <div class="mdl-snackbar__text"></div>
+          <button class="mdl-snackbar__action" type="button"></button>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      Created by <a href="http://metaist.com">Metaist LLC</a>
+    </footer>
+
+    <script src="cordova.js"></script>
+    <script src="app/index.js"></script>
+  </body>
+</html>

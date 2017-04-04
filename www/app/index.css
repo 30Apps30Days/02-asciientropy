@@ -1,0 +1,83 @@
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+body {
+  /* prevent callout to copy image, etc when tap to hold */
+  -webkit-touch-callout: none;
+
+  /* prevent webkit from resizing text to fit */
+  -webkit-text-size-adjust: none;
+
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-user-select: none;
+
+  background-color: #E4E4E4;
+  background-attachment: fixed;
+
+  font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#options {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.page-content {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.center-center {
+  position: relative;
+  top: 40%;
+  transform: translateY(-40%);
+  text-align: center;
+  padding: 1em;
+}
+
+.password {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 7vw;
+  font-weight: normal;
+  letter-spacing: 2px;
+  line-height: 100%;
+  max-width: 100%;
+
+  cursor: default;
+
+    /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin-bottom: 0.25em;
+}
+
+footer {
+  position: absolute;
+  color: #000;
+  bottom: 1em;
+  right: 1em;
+}
+
+footer a { color: blue; }
